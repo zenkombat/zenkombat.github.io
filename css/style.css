@@ -19,6 +19,11 @@ hr {
   background-color: #3d4351 !important;
 }
 
+.parallax-window {
+  min-height: 550px;
+  background: transparent;
+}
+
 section {
   min-height: 600px;
 }
@@ -57,7 +62,3 @@ footer p {
   padding-bottom: 20px;
 }
 
-nav a img {
-  width: 100%;
-  height: 40px;
-}

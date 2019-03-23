@@ -20,7 +20,7 @@
   <!-- Navbar -->
   <nav id="navbar" class="navbar shadow animated fadeInDown navbar-expand-lg navbar-dark">
     <a class="navbar-brand js-scroll-trigger" href="#home">
-      <img src="img/zen-square.png" alt="Zen Kombat UNY" />
+      <img src="img/zen-square.png" width="40px" height="40px" alt="Zen Kombat UNY" />
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,11 +43,21 @@
   </nav>
   <!-- Akhir navbar -->
 
-  <!-- Section: Image -->
+  <!-- 
   <section class="image" id="home">
     <img class="img-fluid" src="img/foto.png" alt="" style="width:100%" />
   </section>
-  <!-- Akhir image -->
+ -->
+
+  <!-- Image parallax -->
+  <section class="home" id="home">
+    <div class="wrapper">
+      <div class="parallax">
+        <div class="parallax-window img-fluid" data-parallax="scroll" data-image-src="img/foto.png"></div>
+      </div>
+    </div>
+  </section>
+  <!-- Akhir parallax -->
 
   <!-- About -->
   <section class="about" id="about">
@@ -191,9 +201,10 @@
           header.removeClass("animated fadeInDown");
           header.addClass("animated fadeInDown fixed-top navbar-custom");
         } else {
-          header.removeClass("fixed-top navbar-dark bg-dark navbar-custom");
+          header.removeClass("fixed-top navbar-custom");
         }
       });
+      $('.parallax-window').parallax({ imageSrc: 'img/foto.png' });
     })(jQuery);
   </script>
 </body>
