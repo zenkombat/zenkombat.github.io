@@ -19,8 +19,8 @@
 <body>
   <!-- Navbar -->
   <nav id="navbar" class="navbar shadow animated fadeInDown navbar-expand-lg">
-    <a class="navbar-brand" href="#">
-      <img src="img/icon1.png" alt="Zen Kombat UNY" />
+    <a class="navbar-brand js-scroll-trigger" href="#home">
+      <img src="img/zen-square.png" alt="Zen Kombat UNY" />
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,7 +30,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link js-scroll-trigger" href="#image">Home<span class="sr-only">(current)</span></a>
+          <a class="nav-link js-scroll-trigger" href="#home">Home<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#about">About</a>
@@ -44,7 +44,7 @@
   <!-- Akhir navbar -->
 
   <!-- Section: Image -->
-  <section class="image" id="image">
+  <section class="image" id="home">
     <img class="img-fluid" src="img/foto.png" alt="" style="width:100%" />
   </section>
   <!-- Akhir image -->
@@ -103,7 +103,6 @@
           <hr id="hr" />
         </div>
       </div>
-
       <div class="row" id="row1">
         <div class="col-md-4">
           <div class="card">
@@ -139,6 +138,7 @@
           </div>
         </div>
       </div>
+
     </div>
   </section>
   <!-- Akhir gallery -->
@@ -162,6 +162,7 @@
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
   <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="js/parallax.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>
@@ -170,7 +171,6 @@
     crossorigin="anonymous"></script>
 
   <!-- Bootstrap core JavaScript -->
-
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Plugin JavaScript -->
@@ -188,13 +188,12 @@
       $(window).scroll(function () {
         var scroll = $(window).scrollTop();
         if (scroll >= 500) {
-          header.removeClass("animated fadeInDown navbar-dark bg-dark");
+          header.removeClass("animated fadeInDown");
           header.addClass("animated fadeInDown fixed-top navbar-custom");
         } else {
           header.removeClass("fixed-top navbar-dark bg-dark navbar-custom");
         }
       });
-
     })(jQuery);
   </script>
 </body>
